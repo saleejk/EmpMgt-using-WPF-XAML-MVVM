@@ -23,8 +23,7 @@ namespace EmployeeApp
         {
             InitializeComponent();
             viewModel=new EmployeeViewModel();
-            this.DataContext = viewModel;
-            
+            this.DataContext = viewModel;    
         }
     }
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using Microsoft.Data.SqlClient;
@@ -14,13 +13,8 @@ namespace EmployeeApp.Model
     {
         public string connectionString = "data source=DESKTOP-4HK2TSI;database=employeeDB;integrated security=SSPI;TrustServerCertificate=True";
 
-
-
-        //private static List<Employee> employeesList = new List<Employee>();
         public EmployeeService()
-        {
-           
-            //employeesList = new List<Employee> { new Employee() { Id=1,Name = "anas", Title = "dotnet Developer", Department = "bridgeon" } };
+        {      
         }
         public List<Employee> GetAll()
         {
@@ -43,20 +37,15 @@ namespace EmployeeApp.Model
                         employeesList.Add(emp);
                     }
                     return employeesList;
-
                 }
-
             }
             catch (SqlException ex)
             {
                 throw new Exception(ex.Message);
-            }
-          
+            }  
         }
         public bool AddEmployee(Employee employee)
         {
-            //employeesList.Add(employee);
-            //return true;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -70,11 +59,6 @@ namespace EmployeeApp.Model
         }
         public bool UpdateEmployee(Employee employee)
         {
-            //var em = employeesList.FirstOrDefault(e => e.Id == employee.Id);
-            //em.Name = employee.Name;
-            //em.Title = employee.Title;
-            //em.Department = employee.Department;
-            //return "Update Successfully";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -89,7 +73,6 @@ namespace EmployeeApp.Model
         }
         public bool DeleteEmployee(int id)
         {
-            //var deleteEmployee = employeesList.FirstOrDefault(e => e.Id == id);
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -97,9 +80,7 @@ namespace EmployeeApp.Model
                 command.Parameters.AddWithValue("id", id);
                 command.ExecuteNonQuery();
             }
-                return true;
-            
+                return true;    
         }
     }
-
 }

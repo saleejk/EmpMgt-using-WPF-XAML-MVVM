@@ -23,23 +23,30 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Employee Management" 
                    Grid.Row="0"
-                   Grid.Column="0"
-                   Grid.ColumnSpan="2"
+                   Grid.Column="1"
                    FontSize="20"
                    FontWeight="Bold"
-                   HorizontalAlignment="Center"/>
+                   HorizontalAlignment="Left" Margin="173,0,0,1"/>
         <TextBlock Text="Enter UserId"
                    Grid.Row="1"
-                   Grid.Column="0" />
+                   Grid.Column="0"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
         <TextBlock Text="Enter Name"
                    Grid.Row="2"
-                   Grid.Column="0" />
+                   Grid.Column="0"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
         <TextBlock Text="Enter Title"
                    Grid.Row="3"
-                   Grid.Column="0" />
+                   Grid.Column="0"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
         <TextBlock Text="Enter Department"
                    Grid.Row="4"
-                   Grid.Column="0" />
+                   Grid.Column="0"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
         <TextBox Name="txtId"
                  Grid.Row="1"
                  Grid.Column="1"
@@ -70,7 +77,6 @@
                  Text="{Binding Path=CurrentEmployee.Department,
             Mode=TwoWay}"/>
 
-        <!-- Buttons StackPanel -->
         <StackPanel Orientation="Horizontal"
                     Grid.Row="5"
                     Grid.Column="1">

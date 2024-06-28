@@ -33,7 +33,6 @@ namespace EmployeeApp.ViewModel
             saveCommand=new RelayCommand(Save);
             deleteCommand=new RelayCommand(Delete);
             updateCommand=new RelayCommand(Update);
-
         }
         #region DisplayOperation
         public ObservableCollection<Employee> employeesList { get; set; }
@@ -42,7 +41,6 @@ namespace EmployeeApp.ViewModel
         {
             get { return employeesList; }
             set { employeesList = value; OnPropertyChanged("employeesList"); }
-
         }
         private void LoadData()
         {
@@ -63,7 +61,6 @@ namespace EmployeeApp.ViewModel
             get { return message; }
             set { message = value;OnPropertyChanged("Message"); }
         }
-
         private RelayCommand saveCommand;
         public RelayCommand SaveCommand
         {
@@ -73,8 +70,6 @@ namespace EmployeeApp.ViewModel
         {
             try
             {
-                //employeeService.AddEmployee(CurrentEmployee);
-                //LoadData();
                 var IsSaved = employeeService.AddEmployee(CurrentEmployee);
                 LoadData();
                 if (IsSaved)
@@ -85,7 +80,6 @@ namespace EmployeeApp.ViewModel
                 {
                     Message = "Save operation failed";
                 }
-
             }
             catch (Exception ex)
             {

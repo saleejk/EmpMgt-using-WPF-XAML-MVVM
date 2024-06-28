@@ -20,9 +20,10 @@ namespace EmployeeApp.Commands
             //throw new NotImplementedException();
             return true;
         }
-        public void Execute(object parameter) { 
+        public void Execute(object parameter) 
+        {
+            //throw new NotImplementedException();
             DoWork();
-        //throw new NotImplementedException();
         }
     }
 }

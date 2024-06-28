@@ -18,7 +18,6 @@ namespace EmployeeApp.Model
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
-
         }
         private int id;
         public int Id
@@ -38,19 +37,11 @@ namespace EmployeeApp.Model
             get { return title; }
             set { title = value; OnPropertyChanged(nameof(Title)); }
         }
-
         private string department;
         public string Department
         {
             get { return department; }
             set { department = value; OnPropertyChanged(nameof(Department)); }
         }
-
-
-
-        //public int Id { get; set; }
-        //public string Name { get; set; }
-        //public string Title { get; set; }
-        //public string Department {  get; set; }
     }
 }
